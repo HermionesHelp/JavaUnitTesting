@@ -22,7 +22,8 @@ public class Item {
         this.buyPrice = buyPrice;
     }
 
-    public String getItem(){
+    @Override
+    public String toString(){
         if (this.sellPrice != 0) {
             return "This is a " + this.name + " - " + this.description + ". You can buy this item for " + this.buyPrice + ". Or sell this item for " + this.sellPrice + ".";
         } else{

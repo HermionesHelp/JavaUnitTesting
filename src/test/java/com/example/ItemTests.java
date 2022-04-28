@@ -19,7 +19,7 @@ public class ItemTests {
     public void testNoSell(){
         Item testItem1 = new Item("Lucky Stone", "This stone bring you luck on your adventure", 50);
         String expected = "This is a Lucky Stone - This stone bring you luck on your adventure. You can buy this item for 50. It cannot be sold.";
-        assertEquals(expected, testItem1.getItem());
+        assertEquals(expected, testItem1.toString());
 
     }
 
@@ -27,7 +27,7 @@ public class ItemTests {
     @DisplayName("Test correct return for sellable item.")
     public void testSellable(){
         Item testItem2 = new Item("Steel Sword", "Good for hacking up enemies.", 15, 5);
-        assertEquals("This is a Steel Sword - Good for hacking up enemies.. You can buy this item for 15. Or sell this item for 5.", testItem2.getItem());
+        assertEquals("This is a Steel Sword - Good for hacking up enemies.. You can buy this item for 15. Or sell this item for 5.", testItem2.toString());
     }
 
     @Test
